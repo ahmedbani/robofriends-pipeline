@@ -8,8 +8,8 @@ gcloud auth configure-docker
 
 echo "tagging image"
 
-sudo docker tag robofriends gcr.io/planar-root-344213/robofriends
+docker tag robofriends gcr.io/planar-root-344213/robofriends
 
 echo "pushing the image"
 
-sudo docker push gcr.io/planar-root-344213/robofriends
+docker push gcr.io/planar-root-344213/robofriends
