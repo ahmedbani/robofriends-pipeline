@@ -12,7 +12,12 @@ pipeline {
 	       ''' 
 
            sh 'ls -la'
+
+           sh 'docker --version'
+	   sh 'docker ps'
 	 }
+         
+         
  	}
     
 }
