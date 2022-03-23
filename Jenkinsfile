@@ -1,8 +1,6 @@
 pipeline {
 
-    agent {
-    docker { image 'node:latest'}
-}
+    agent any
     
     stages {
     
@@ -10,13 +8,11 @@ pipeline {
 	  steps {
  	    sh '''
 		whoami
-                pwd			
-	       ''' 
-
+		docker --version
+		'''
            sh 'ls -la'
 
 
-           sh 'npm install'
         } 
          
       
