@@ -3,7 +3,15 @@ pipeline {
     agent any
     
     stages {
-
+    
+        stage("verify") {
+	  steps {
+ 	    sh '''
+		docker version
+		docker-compose version
+	       '''
+	  }
+ 	}
         stage('Build') {
             steps {
                 sh '''
