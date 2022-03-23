@@ -7,30 +7,13 @@ pipeline {
         stage("verify") {
 	  steps {
  	    sh '''
-		docker version
-		docker-compose version
-	       '''
-	  }
+		whoami
+                pwd			
+	       ''' 
+
+           sh 'ls -la'
+	 }
  	}
-        stage('Build') {
-            steps {
-                sh '''
-                    ./jenkins/build/build.sh
-
-                '''
-            }
-
-        }
-	stage('Push') {
-            steps {
-                sh './jenkins/push/push.sh'
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                sh './jenkins/deploy/publish.sh'
-            }
-        }
-    }
+    
+}
 }
