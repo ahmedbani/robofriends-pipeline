@@ -1,6 +1,8 @@
 pipeline {
 
-    agent any
+    agent {
+    docker { image 'node:latest'}
+}
     
     stages {
     
@@ -13,11 +15,12 @@ pipeline {
 
            sh 'ls -la'
 
-           sh 'docker --version'
-	   sh 'docker ps'
-	 }
+
+           sh 'npm install'
+        } 
          
-         
+      
+        
  	}
     
 }
