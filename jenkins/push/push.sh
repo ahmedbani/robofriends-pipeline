@@ -2,6 +2,8 @@
 
 echo "*** pushing image to gcr"
 
+docker-credential-gcr configure-docker
+
 echo "tagging image"
 
 docker tag robofriends gcr.io/planar-root-344213/robofriends
