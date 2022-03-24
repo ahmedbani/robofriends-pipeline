@@ -1,23 +1,29 @@
 pipeline {
 
     agent any
-    
     stages {
-    
-        stage("verify") {
-	  steps {
- 	    sh '''
-		whoami
-		docker --version
-		'''
-           sh 'ls -la'
 
+        stage('Build') {
+            steps {
+                sh '''
+                    ./jenkins/build/build.sh
 
-        } 
-         
-      
-        
- 	}
-    
+                '''
+            }
+
+        }
+
+        stage('Push') {
+            steps {
+                sh './jenkins/push/push.sh'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                sh './jenkins/deploy/publish.sh'
+            }
+        }
+    }
 }
-}
+
