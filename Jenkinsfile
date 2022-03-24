@@ -1,6 +1,10 @@
 pipeline {
 
     agent any
+    environment {
+        PASS = credentials('gcr-cred') 
+    }
+
     stages {
 
         stage('Build') {
