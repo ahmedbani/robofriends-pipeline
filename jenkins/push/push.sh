@@ -7,7 +7,7 @@ echo "tagging image"
 
 docker tag robofriends gcr.io/planar-root-344213/robofriends
 
-docker login -u oauth2accesstoken -p "ya29.A0ARrdaM--no0amDQSpWIpAQXAlB5aZeNVC56JB3MmCt3s-JBS5JR_hEzIzFhkNjMSh0DwXqjKN5pjez4dbtnaIIvGtsWBWg0UqFrZjimaJyzrS-SjGahcuZWUBZKvm0vHupGNcvj8PVPCQvzGzOQBLkLcExE0aGfG81sDSGtNCIOVt20rwBMx6PMtBCztPJszNXUXxm5nCTAzi-3EvY8-MGV0kPzBoWK4Jt9r1nLbHn7J7fyA1F_S7WRty6M7VrRoxM781iI" https://gcr.io
+docker login -u oauth2accesstoken -p "ya29.A0ARrdaM8nEsJoKnmx77ywRsg3jx2jY5n_x0UPZVPJ7hTyTEzSqzK280RBeT4kpGjnBBmFu5LqKOu9TqWuz0A0Vs0ihp3zzBB87iYv96PScO1Ix4H0_P_FdPHlaHEWkGnMgrDd9Y4UygXq7XZBsku27OmhATFrEcl22Y3y1xve3KV60ya9BQdWu5S0mZfdyzh1k2XXFDFcGWBGQPBZwalSCh9nfKCPLRvRnEqdsdzOPKSeOE-sgb8TCPcDGVCsjz6p1d-9vF0" https://gcr.io
 
 echo "pushing the image"
 
