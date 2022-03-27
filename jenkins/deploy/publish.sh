@@ -2,6 +2,6 @@
 
 
 pwd
-yes | scp -i ../../.ssh/id_rsa ./jenkins/deploy/deploy.sh ahmed@application-vm
+scp ./jenkins/deploy/deploy.sh ahmed@34.125.84.234
 yes | ssh -i ../../.ssh/id_rsa ahmed@application-vm "./deploy.sh"
 
